@@ -1,6 +1,6 @@
 from myapp import app
 from myapp import db, data_base
-from myapp.dao import User, Repository
+from myapp.dao import User, Users, Repository, Repositories, Veiculo, Veiculos, Motorista, Motoristas, Veiculo_Alocado, Veiculos_Alocados
 import logging
 
 CREATE_DB_EMPTY = False
@@ -16,6 +16,8 @@ try:
     if CREATE_DB_EMPTY:
         db.drop_all()
         db.create_all()
+        db.session.commit()
+        print('DB recreated')
         print(f'Data base {data_base} created with success!!')
     else:
         print(f'Data base {data_base} load successfully!')

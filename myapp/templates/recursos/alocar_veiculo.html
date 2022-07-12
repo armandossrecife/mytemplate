@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}
+  Alocar Veiculo Page
+{% endblock %}
+
+{% block content %}
+
+<form method="POST" class="form-alocarveiculo" >
+    {{ form.hidden_tag() }}
+    <h1 class="h3 mb-3 font-weight-normal">
+        Alocar Veiculo a Motorista
+    </h1>
+
+    <br>
+
+    {{ form.owner_veiculo.label() }}
+    {{ form.owner_veiculo(class="form-control", placeholder="Id do Veiculo") }}
+
+    {{ form.owner_motorista.label() }}
+    {{ form.owner_motorista(class="form-control", placeholder="Id do Motorista") }}
+
+    {{ form.origem.label() }}
+    {{ form.origem(class="form-control", placeholder="Origem da entrega") }}
+
+    {{ form.latitude_origem.label() }}
+    {{ form.latitude_origem(class="form-control", placeholder="Latitude da entrega") }}
+
+    {{ form.longitude_origem.label() }}
+    {{ form.longitude_origem(class="form-control", placeholder="Longitude da entrega") }}
+
+    {{ form.destino.label() }}
+    {{ form.destino(class="form-control", placeholder="Destino da entrega") }}
+
+    {{ form.latitude_destino.label() }}
+    {{ form.latitude_destino(class="form-control", placeholder="Latitude da entrega") }}
+
+    {{ form.longitude_destino.label() }}
+    {{ form.longitude_destino(class="form-control", placeholder="Longitude da entrega") }}
+
+    {{ form.carga.label() }}
+    {{ form.carga(class="form-control", placeholder="Peso da carga da entrega") }}
+
+    {{ form.data_entrega.label() }}
+    {{ form.data_entrega(class="form-control", placeholder="Data da entrega") }}
+
+    <br>
+    {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+    <br>
+</form>
+
+{% endblock %}

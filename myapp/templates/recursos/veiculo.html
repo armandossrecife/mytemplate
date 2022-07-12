@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+  Veiculo Page
+{% endblock %}
+
+{% block content %}
+
+<form method="POST" class="form-veiculo" >
+    {{ form.hidden_tag() }}
+    <h1 class="h3 mb-3 font-weight-normal">
+        New Veiculo
+    </h1>
+    <br>
+    <!-- Placa do veiculo -->
+    {{ form.placa.label() }}
+    {{ form.placa(class="form-control", placeholder="Placa do veiculo") }}
+
+    <!-- Marca do veiculo -->
+    {{ form.marca.label() }}
+    {{ form.marca(class="form-control", placeholder="Marca do veiculo") }}
+
+    <!-- Modelo do veiculo -->
+    {{ form.modelo.label() }}
+    {{ form.modelo(class="form-control", placeholder="Modelo do veiculo") }}
+
+    <!-- Capacidade do veiculo -->
+    {{ form.carga.label() }}
+    {{ form.carga(class="form-control", placeholder="Carga do veiculo") }}
+
+    <!-- tipo do veiculo -->
+    {{ form.tipo.label() }}
+    {{ form.tipo(class="form-control", placeholder="Marca do veiculo") }}
+
+    <br>
+    {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+    <br>
+</form>
+
+{% endblock %}

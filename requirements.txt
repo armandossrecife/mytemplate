@@ -6,4 +6,5 @@ Flask-Login
 Flask-Bcrypt
 Flask-SQLAlchemy
 email_validator
+flask-paginate
 bcrypt==3.1.3

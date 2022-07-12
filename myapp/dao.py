@@ -37,6 +37,41 @@ class Repository(db.Model):
     def __repr__(self):
         return f'Repository {self.name}'
 
+class Veiculo(db.Model):
+    id = db.Column(db.Integer(), primary_key=True)
+    placa = db.Column(db.String(length=20), nullable=False, unique=False)
+    marca = db.Column(db.String(length=100), nullable=False, unique=False)
+    modelo = db.Column(db.String(length=100), nullable=False, unique=False)
+    carga = db.Column(db.Integer(), nullable=True, default=0)
+    tipo = db.Column(db.Integer(), nullable=True, default=0)
+    def __repr__(self):
+        return f'Repository {self.placa}'
+
+class Motorista(db.Model):
+    id = db.Column(db.Integer(), primary_key=True)
+    cpf = db.Column(db.String(length=11), nullable=False, unique=False)
+    nome = db.Column(db.String(length=100), nullable=False, unique=False)
+    telefone = db.Column(db.String(length=11), nullable=False, unique=False)
+    categoria = db.Column(db.Integer(), nullable=True, default=0)
+    data_nascimento = db.Column(db.DateTime, nullable=True)
+    def __repr__(self):
+        return f'Motorista {self.cpf}'
+
+class Veiculo_Alocado(db.Model):
+    id = db.Column(db.Integer(), primary_key=True)
+    owner_veiculo = db.Column(db.Integer(), db.ForeignKey('veiculo.id'))
+    owner_motorista = db.Column(db.Integer(), db.ForeignKey('motorista.id'))
+    origem = db.Column(db.String(length=1024), nullable=False, unique=False)
+    latitude_origem = db.Column(db.Float(), nullable=True, default=0)
+    longitude_origem = db.Column(db.Float(), nullable=True, default=0)
+    destino = db.Column(db.String(length=1024), nullable=False, unique=False)
+    latitude_destino = db.Column(db.Float(), nullable=True, default=0)
+    longitude_destino = db.Column(db.Float(), nullable=True, default=0)
+    carga = db.Column(db.Float(), nullable=True, default=0)
+    data_entrega = db.Column(db.DateTime, nullable=False, default=datetime.now)
+    def __repr__(self):
+        return f'Repository {self.id}'
+
 class Users:
     def insert_user(self, user):
         try:
@@ -94,3 +129,77 @@ class Repositories:
                 list_repositories.append(each)
 
         return list_repositories
+
+class Veiculos:
+    # insere novo veiculo
+    def insert_veiculo(self, veiculo):
+        try:
+            db.session.add(veiculo)
+            db.session.commit()
+        except Exception as e:
+            print(f'Error during insert veiculo - {e}')
+    
+    # procura veiculo por placa
+    def query_veiculo_by_placa(self, p_placa):
+        veiculo = Veiculo.query.filter_by(placa=p_placa).first()
+        return veiculo
+
+    # procura veiculo por id
+    def query_veiculo_by_id(self, p_id):
+        veiculo = Veiculo.query.filter_by(id=p_id).first()
+        return veiculo
+    
+    # lista todos os veiculos
+    def list_all_veiculos(self):
+        return Veiculo.query.all()
+
+class Motoristas:
+    # insere novo motorista
+    def insert_motorista(self, motorista):
+        try:
+            db.session.add(motorista)
+            db.session.commit()
+        except Exception as e:
+            print(f'Error during insert motorista - {e}')
+    
+    # procura motorista por cpf
+    def query_motorista_by_cpf(self, p_cpf):
+        motorista = Motorista.query.filter_by(cpf=p_cpf).first()
+        return motorista
+
+    # procura motorista por id
+    def query_motorista_by_id(self, p_id):
+        motorista = Motorista.query.filter_by(id=p_id).first()
+        return motorista
+    
+    # lista todos os motoristas
+    def list_all_motoristas(self):
+        return Motorista.query.all()
+
+class Veiculos_Alocados:
+    # Aloca um veiculo a um motorista
+    def insert_alocacao(self, alocacao):
+        try:
+            db.session.add(alocacao)
+            db.session.commit()
+        except Exception as e:
+            print(f'Error during insert alocacao - {e}')
+    
+    # procura alocacoes por veiculo 
+    def query_alocacoes_by_veiculo(self, p_id_veiculo):
+        alocacoes = Veiculo_Alocado.qyery.filter_by(owner_veiculo=p_id_veiculo).all()
+        return alocacoes
+
+    # procura alocacoes por motorista 
+    def query_alocacoes_by_motorista(self, p_id_motorista):
+        alocacoes = Veiculo_Alocado.qyery.filter_by(owner_motorista=p_id_motorista).all()
+        return alocacoes
+
+    # procura alocacao por id
+    def query_alocacao_by_id(self, p_id):
+        alocacao = Veiculo_Alocado.query.filter_by(id=p_id).first()
+        return alocacao
+    
+    # lista todas as alocacoes
+    def list_all_alocacoes(self):
+        return Veiculo_Alocado.query.all()

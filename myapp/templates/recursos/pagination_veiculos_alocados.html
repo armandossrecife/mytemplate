@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}
+  Veiculos Alocados
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>owner_veiculo</th>
+              <th>owner_motorista</th>
+              <th>origem</th>
+              <th>latitude_origem</th>
+              <th>longitude_origem</th>
+              <th>destino</th>
+              <th>latitude_destino</th>
+              <th>longitude_destino</th>
+              <th>carga</th>
+              <th>data_entrega</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for alocado in veiculos %}
+            <tr>
+              <td>{{ loop.index + (page - 1) * per_page }}</td>
+              <td>{{ alocado.owner_veiculo }}</td>
+              <td>{{ alocado.owner_motorista }}</td>
+              <td>{{ alocado.origem }}</td>              
+              <td>{{ alocado.latitude_origem }}</td>
+              <td>{{ alocado.longitude_origem }}</td>
+              <td>{{ alocado.destino }}</td>              
+              <td>{{ alocado.latitude_destino }}</td>
+              <td>{{ alocado.longitude_destino }}</td>
+              <td>{{ alocado.carga }}</td>              
+              <td>{{ alocado.data_entrega }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {{ pagination.links }}
+    </div>
+
+    {% endblock %}

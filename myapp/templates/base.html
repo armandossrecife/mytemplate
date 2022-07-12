@@ -23,12 +23,36 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <nav class="navbar navbar-expand-md navbar-light">
-      <a class="navbar-brand" href="{{ url_for('myapp_page') }} ">SysNews</a>
+      <a class="navbar-brand" href="{{ url_for('veiculos_alocados_page') }} ">SysLogistics</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
           {% if current_user.is_authenticated %}
+            <ul class="navbar-nav" mr-auto>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">
+                    Veiculos
+                    </a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ url_for('veiculos_page') }}">Listar Veiculos</a>
+                    <a class="dropdown-item" href="{{ url_for('insere_veiculo') }}">Insere Veiculo</a>
+                    <a class="dropdown-item" href="{{ url_for('alocar_veiculo_page') }}">Alocar Veículo</a>
+                    <a class="dropdown-item" href="{{ url_for('veiculos_alocados_page') }}">Veiculos Alocados</a>
+                    </div>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">
+                    Motoristas
+                    </a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ url_for('motoristas_page') }}">Listar Motoristas</a>
+                    <a class="dropdown-item" href="{{ url_for('insere_motorista') }}">Insere Motorista</a>
+                    </div>
+                </li>
+            </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" style="color: lawngreen; font-weight: bold">
@@ -54,6 +78,7 @@
             </ul>
           {% endif %}
       </div>
+
     </nav>
       {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}

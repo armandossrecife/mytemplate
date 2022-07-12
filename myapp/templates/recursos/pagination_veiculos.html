@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-  My News Page
+  My Veiculos Page
 {% endblock %}
 
 {% block content %}
@@ -11,16 +11,22 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Name</th>
-              <th>Email</th>
+              <th>Placa</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>Carga</th>
+              <th>Tipo</th>
             </tr>
           </thead>
           <tbody>
-            {% for user in users %}
+            {% for veiculo in veiculos %}
             <tr>
               <td>{{ loop.index + (page - 1) * per_page }}</td>
-              <td>{{ user.username }}</td>
-              <td>{{ user.email_address}} </td>
+              <td>{{ veiculo.placa}}</td>
+              <td>{{ veiculo.marca}}</td>
+              <td>{{ veiculo.modelo}}</td>
+              <td>{{ veiculo.carga}}</td>
+              <td>{{ veiculo.tipo}}</td>
             </tr>
             {% endfor %}
           </tbody>
