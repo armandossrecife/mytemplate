@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "latitude": -3.7260311,
+    "longitude": -38.5047165,
+    "name": "Boteco Praia",
+    "address": "",
+    "city": "",
+    "radius": 1,
+    "state": "", 
+    "promotions": 0, 
+    "promotionsNames":""
+  },
+  {
+    "id": 2,
+    "latitude": -3.7241736,
+    "longitude": -38.5042015,
+    "name": "Habibs",
+    "address": "",
+    "city": "",
+    "radius": 1,
+    "state": "", 
+    "promotions": 0, 
+    "promotionsNames":""
+  },
+  {
+    "id": 3,
+    "latitude": -3.7244947,
+    "longitude": -38.5028738,
+    "name": "Cafe Vida",
+    "address": "",
+    "city": "",
+    "radius": 1,
+    "state": "", 
+    "promotions": 0, 
+    "promotionsNames":""
+  },
+  {
+    "id": 4,
+    "latitude": -3.7261007,
+    "longitude": -38.5022274,
+    "name": "Koni Street Japanese",
+    "address": "",
+    "city": "",
+    "radius": 1,
+    "state": "", 
+    "promotions": 0, 
+    "promotionsNames":""
+  },
+  {
+    "id": 5,
+    "latitude": -3.7255493,
+    "longitude": -38.499395,
+    "name": "Acarajé Cia",
+    "address": "",
+    "city": "",
+    "radius": 1,
+    "state": "", 
+    "promotions": 0, 
+    "promotionsNames":""
+  },
+  {
+    "id": 6,
+    "latitude": -3.7255493,
+    "longitude": -38.499395,
+    "name": "Barraca da Boa",
+    "address": "",
+    "city": "",
+    "radius": 1,
+    "state": "", 
+    "promotions": 0, 
+    "promotionsNames":""
+  },
+  {
+    "id": 7,
+      "latitude": -3.7267484,
+      "longitude": -38.4984938,
+    "name": "Didi Rei dos Mares",
+    "address": "",
+    "city": "",
+    "radius": 1,
+    "state": "", 
+    "promotions": 0, 
+    "promotionsNames":""
+  },
+  {
+    "id": 8,
+      "latitude": -3.7267484,
+      "longitude": -38.4995881,
+    "name": "Sabor de Mar",
+    "address": "",
+    "city": "",
+    "radius": 1,
+    "state": "", 
+    "promotions": 0, 
+    "promotionsNames": ""
+ 	},
+  {
+    "id": 9,
+    "latitude": -3.7283864,
+    "longitude": -38.4974209,
+    "name": "Bistrô Garrafeira",
+    "address": "",
+    "city": "",
+    "radius": 1,
+    "state": "", 
+    "promotions": 0, 
+    "promotionsNames":""
+  },
+  {
+    "id": 10,
+      "latitude": -3.7283864,
+      "longitude": -38.4974209,
+    "name": "Empório Delitalia",
+    "address": "",
+    "city": "",
+    "radius": 1,
+    "state": "", 
+    "promotions": 0, 
+    "promotionsNames":""
+ }
+]

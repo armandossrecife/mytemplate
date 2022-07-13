@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+  Mapa Page
+{% endblock %}
+
+{% block content %}
+
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mapa.css') }}">
+    <!-- <script type="module" src="{{ url_for('static', filename='mapas.js') }}"></script> -->
+
+    <!--The div element for the map -->
+    <div id="mapa" style="height: 800px; width: 100%;"></div>
+    <!-- [END maps_add_map_div] -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=?"></script>
+
+    <!-- Caixa de informação -->
+    <script src="{{ url_for('static', filename='infobox.js') }}"></script>
+    <!-- Agrupamento dos marcadores -->
+    <script src="{{ url_for('static', filename='markerclusterer.js') }}"></script>
+    <!-- Arquivo de inicialização do mapa -->
+    <script type="text/javascript" data-my_var_1="/static/mapsStores.json" src="{{ url_for('static', filename='mapa.js') }}"></script>
+    
+{% endblock %}

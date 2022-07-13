@@ -5,7 +5,7 @@
 
 {% block content %}
 
-<div class="container">
+<div>
       <div class="table-responsive">
         <table class="table table-hover">
           <thead>
@@ -16,6 +16,7 @@
               <th>Modelo</th>
               <th>Carga</th>
               <th>Tipo</th>
+              <th>Options</th>
             </tr>
           </thead>
           <tbody>
@@ -27,12 +28,15 @@
               <td>{{ veiculo.modelo}}</td>
               <td>{{ veiculo.carga}}</td>
               <td>{{ veiculo.tipo}}</td>
+              <td>
+                <a href="#">Editar</a> | <a href="#">Deletar</a>
+              </td>
             </tr>
             {% endfor %}
           </tbody>
         </table>
       </div>
       {{ pagination.links }}
-    </div>
+</div>
 
-    {% endblock %}
+{% endblock %}

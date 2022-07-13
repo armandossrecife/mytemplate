@@ -5,22 +5,22 @@
 
 {% block content %}
 
-<div class="container">
+<div>
       <div class="table-responsive">
         <table class="table table-hover">
           <thead>
             <tr>
               <th>#</th>
-              <th>owner_veiculo</th>
-              <th>owner_motorista</th>
-              <th>origem</th>
+              <th>Veiculo</th>
+              <th>Motorista</th>
+              <th>Origem</th>
               <th>latitude_origem</th>
               <th>longitude_origem</th>
-              <th>destino</th>
+              <th>Destino</th>
               <th>latitude_destino</th>
               <th>longitude_destino</th>
-              <th>carga</th>
-              <th>data_entrega</th>
+              <th>Carga</th>
+              <th>Entrega</th>
             </tr>
           </thead>
           <tbody>
@@ -43,6 +43,6 @@
         </table>
       </div>
       {{ pagination.links }}
-    </div>
+</div>
 
-    {% endblock %}
+{% endblock %}

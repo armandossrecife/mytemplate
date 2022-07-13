@@ -189,3 +189,13 @@ def veiculos_alocados_page():
     pagination_alocacoes = get_alocacoes(offset=offset, per_page=per_page, alocacoes=alocacoes)
     pagination = Pagination(page=page, per_page=per_page, total=total, css_framework='bootstrap4')
     return render_template('recursos/pagination_veiculos_alocados.html', veiculos=pagination_alocacoes, page=page, per_page=per_page, pagination=pagination)
+
+@app.route('/mapa')
+@login_required
+def mapa_entregas():
+    return render_template('recursos/mapa.html')
+
+@app.route('/mapalojas')
+@login_required
+def mapa_lojas():
+    return render_template('recursos/mapa_lojas.html')

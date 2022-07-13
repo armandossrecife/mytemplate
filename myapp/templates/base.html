@@ -36,10 +36,10 @@
                     Veiculos
                     </a>
                     <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{ url_for('veiculos_page') }}">Listar Veiculos</a>
-                    <a class="dropdown-item" href="{{ url_for('insere_veiculo') }}">Insere Veiculo</a>
-                    <a class="dropdown-item" href="{{ url_for('alocar_veiculo_page') }}">Alocar Veículo</a>
-                    <a class="dropdown-item" href="{{ url_for('veiculos_alocados_page') }}">Veiculos Alocados</a>
+                        <a class="dropdown-item" href="{{ url_for('veiculos_page') }}">Listar Veiculos</a>
+                        <a class="dropdown-item" href="{{ url_for('insere_veiculo') }}">Insere Veiculo</a>
+                        <a class="dropdown-item" href="{{ url_for('alocar_veiculo_page') }}">Alocar Veículo</a>
+                        <a class="dropdown-item" href="{{ url_for('veiculos_alocados_page') }}">Veiculos Alocados</a>
                     </div>
                 </li>
                 <!-- Dropdown -->
@@ -50,6 +50,16 @@
                     <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{ url_for('motoristas_page') }}">Listar Motoristas</a>
                     <a class="dropdown-item" href="{{ url_for('insere_motorista') }}">Insere Motorista</a>
+                    </div>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop3" data-toggle="dropdown">
+                    Mapas
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ url_for('mapa_entregas') }}">Mapa de Alocados</a>
+                        <a class="dropdown-item" href="{{ url_for('mapa_lojas') }}"> Mapa de Lojas</a>
                     </div>
                 </li>
             </ul>
