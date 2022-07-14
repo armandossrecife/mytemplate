@@ -50,7 +50,7 @@ class MotoristaForm(FlaskForm):
 class AlocarVeiculoForm(FlaskForm):
     owner_veiculo = IntegerField(label='Id do Veiculo:', validators=[NumberRange(min=1, max=10000), DataRequired()])
     owner_motorista = IntegerField(label='Id do Motorista', validators=[NumberRange(min=1, max=10000), DataRequired()])
-    origem = StringField(label='Origem da entrega', validators=[Length(min=2, max=1000), DataRequired()])
+    origem = StringField(label='Origem', validators=[Length(min=2, max=1000), DataRequired()])
     latitude_origem = StringField(label='Latitude da Origem', validators=[Length(min=1, max=100), DataRequired()])
     longitude_origem = StringField(label='Longitude da Origem', validators=[Length(min=1, max=100), DataRequired()])
     destino = StringField(label='Destino da entrega', validators=[Length(min=2, max=1000), DataRequired()])

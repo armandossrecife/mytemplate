@@ -5,8 +5,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='jsonview.bundle.css') }}">     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">     
       <title>
           {% block title %}
 
@@ -33,13 +32,23 @@
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">
+                    Alocação
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ url_for('veiculos_page') }}">Veiculos Disponiveis</a>
+                        <a class="dropdown-item" href="{{ url_for('veiculos_alocados_page') }}">Veiculos Alocados</a>
+                        <a class="dropdown-item" href="{{ url_for('alocar_veiculo_page') }}">Alocar Veículo</a>                                               
+                        <a class="dropdown-item" href="{{ url_for('alocar_veiculo_page') }}">Devolver Veículo</a>
+                    </div>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">
                     Veiculos
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{{ url_for('veiculos_page') }}">Listar Veiculos</a>
-                        <a class="dropdown-item" href="{{ url_for('insere_veiculo') }}">Insere Veiculo</a>
-                        <a class="dropdown-item" href="{{ url_for('alocar_veiculo_page') }}">Alocar Veículo</a>
-                        <a class="dropdown-item" href="{{ url_for('veiculos_alocados_page') }}">Veiculos Alocados</a>
+                        <a class="dropdown-item" href="{{ url_for('insere_veiculo') }}">Novo Veiculo</a>                                                
                     </div>
                 </li>
                 <!-- Dropdown -->
@@ -49,17 +58,73 @@
                     </a>
                     <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{ url_for('motoristas_page') }}">Listar Motoristas</a>
-                    <a class="dropdown-item" href="{{ url_for('insere_motorista') }}">Insere Motorista</a>
+                    <a class="dropdown-item" href="{{ url_for('insere_motorista') }}">Novo Motorista</a>
                     </div>
                 </li>
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop3" data-toggle="dropdown">
+                    Manutenções 
+                    </a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ url_for('insere_motorista') }}">Registrar Manunteção</a>
+                    <a class="dropdown-item" href="{{ url_for('motoristas_page') }}">Listar Manutenções</a>
+                    </div>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop4" data-toggle="dropdown">
                     Mapas
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{{ url_for('mapa_entregas') }}">Mapa de Alocados</a>
                         <a class="dropdown-item" href="{{ url_for('mapa_lojas') }}"> Mapa de Lojas</a>
+                    </div>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop5" data-toggle="dropdown">
+                    Alertas
+                    </a>
+                    <div class="dropdown-menu">                        
+                        <a class="dropdown-item" href="#">Veículos Alocados</a>
+                        <a class="dropdown-item" href="#">Veículos Devolvidos</a>
+                        <a class="dropdown-item" href="#">Manutenção</a>
+                        <a class="dropdown-item" href="#">Vencimento de CNH</a>
+                    </div>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop6" data-toggle="dropdown">
+                    Abastecimento
+                    </a>
+                    <div class="dropdown-menu">                        
+                        <a class="dropdown-item" href="#">Listar Abastecimentos</a>
+                        <a class="dropdown-item" href="#">Gerar autorização</a>
+                    </div>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop7" data-toggle="dropdown">
+                    Multas
+                    </a>
+                    <div class="dropdown-menu">                        
+                        <a class="dropdown-item" href="#">Listar Multas</a>
+                        <a class="dropdown-item" href="#">Inserir Multa</a>
+                    </div>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop8" data-toggle="dropdown">
+                    Relatórios
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Veículos Disponíveis</a>
+                        <a class="dropdown-item" href="#">Veículos Alocados</a>
+                        <a class="dropdown-item" href="#">Manutenções Programadas</a>
+                        <a class="dropdown-item" href="#">Manutenções Efetivadas</a>
+                        <a class="dropdown-item" href="#">Abastecimentos</a>
+                        <a class="dropdown-item" href="#">Multas</a>
                     </div>
                 </li>
             </ul>
