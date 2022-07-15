@@ -12,7 +12,7 @@
     </h1>
 
     <br>
-
+    
     {{ form.owner_veiculo.label() }}
     {{ form.owner_veiculo(class="form-control", placeholder="Id do Veiculo") }}
 
@@ -41,8 +41,9 @@
     {{ form.carga(class="form-control", placeholder="Peso da carga da entrega") }}
 
     {{ form.data_entrega.label() }}
-    {{ form.data_entrega(class="form-control", placeholder="Data da entrega") }}
+    {{ form.data_entrega(class="form-control") }}
 
+    
     <br>
     {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
     <br>

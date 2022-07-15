@@ -1,1 +1,109 @@
-13/07/2022 17:32:44 - root - INFO - Application started successfully!
+15/07/2022 09:09:52 - root - INFO - Application started successfully!
+15/07/2022 09:09:52 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/logs/my_app.log", inode=8672616443, flags=11400, id=10569607): is_file, is_inode_meta_mod, is_modified
+15/07/2022 09:09:52 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/logs/my_app.log', is_directory=False>
+15/07/2022 09:09:57 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2022 09:09:57] "[37mGET / HTTP/1.1[0m" 200 -
+15/07/2022 09:09:57 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2022 09:09:57] "[37mGET / HTTP/1.1[0m" 200 -
+15/07/2022 09:09:59 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2022 09:09:59] "[37mGET /myapp HTTP/1.1[0m" 200 -
+15/07/2022 09:10:02 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2022 09:10:02] "[37mGET /alocaveiculo HTTP/1.1[0m" 200 -
+15/07/2022 09:10:19 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2022 09:10:19] "[32mPOST /alocaveiculo HTTP/1.1[0m" 302 -
+15/07/2022 09:10:19 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/myapp/myapp.db-journal", inode=8672657340, flags=11300, id=10569943): is_coalesced, is_created, is_file, is_modified, is_removed
+15/07/2022 09:10:19 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/myapp/myapp.db", inode=8672441738, flags=11000, id=10569946): is_file, is_modified
+15/07/2022 09:10:19 - fsevents - DEBUG - queue_event <FileCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/myapp/myapp.db-journal', is_directory=False>
+15/07/2022 09:10:19 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/myapp', is_directory=True>
+15/07/2022 09:10:19 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/myapp/myapp.db-journal', is_directory=False>
+15/07/2022 09:10:19 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/myapp/myapp.db-journal', is_directory=False>
+15/07/2022 09:10:19 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/myapp', is_directory=True>
+15/07/2022 09:10:19 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/myapp/myapp.db', is_directory=False>
+15/07/2022 09:10:19 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2022 09:10:19] "[37mGET /alocacoes HTTP/1.1[0m" 200 -
+15/07/2022 09:19:52 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.gitignore", inode=8672658001, flags=10100, id=10585120): is_created, is_file
+15/07/2022 09:19:52 - fsevents - DEBUG - queue_event <FileCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/.gitignore', is_directory=False>
+15/07/2022 09:19:52 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate', is_directory=True>
+15/07/2022 09:21:03 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.gitignore", inode=8672658001, flags=11400, id=10585689): is_file, is_inode_meta_mod, is_modified
+15/07/2022 09:21:03 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.gitignore', is_directory=False>
+15/07/2022 09:21:20 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/index.lock", inode=8672658036, flags=10100, id=10586244): is_created, is_file
+15/07/2022 09:21:20 - fsevents - DEBUG - queue_event <FileCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:21:20 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>
+15/07/2022 09:21:20 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/9f/5111ea3cc489454d790927b5f4ed3e6d009881", inode=8672658037, flags=110100, id=10586253): is_created, is_file, is_hardlink
+15/07/2022 09:21:20 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/9f", inode=8672484316, flags=20400, id=10586256): is_directory, is_inode_meta_mod
+15/07/2022 09:21:20 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/9f/tmp_obj_XZDshA", inode=8672658037, flags=111300, id=10586259): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+15/07/2022 09:21:20 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/index.lock", inode=8672658036, flags=11900, id=10586265): is_coalesced, is_created, is_file, is_modified, is_renamed
+15/07/2022 09:21:20 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/index", inode=8672616588, flags=10800, id=10586267): is_file, is_renamed
+15/07/2022 09:21:20 - fsevents - DEBUG - queue_event <FileCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/9f/5111ea3cc489454d790927b5f4ed3e6d009881', is_directory=False>
+15/07/2022 09:21:20 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/9f', is_directory=True>
+15/07/2022 09:21:20 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/9f', is_directory=True>
+15/07/2022 09:21:20 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/9f/tmp_obj_XZDshA', is_directory=False>
+15/07/2022 09:21:20 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/9f/tmp_obj_XZDshA', is_directory=False>
+15/07/2022 09:21:20 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/9f', is_directory=True>
+15/07/2022 09:21:20 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:21:20 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:21:20 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>
+15/07/2022 09:21:20 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index', is_directory=False>
+15/07/2022 09:21:20 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>
+15/07/2022 09:38:31 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/12/4fdae867e089b08274ff359f1a36f76cabeed8", inode=8672658205, flags=110100, id=10589968): is_created, is_file, is_hardlink
+15/07/2022 09:38:31 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/12", inode=8672658204, flags=20500, id=10589971): is_created, is_directory, is_inode_meta_mod
+15/07/2022 09:38:31 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/12/tmp_obj_MF16qZ", inode=8672658205, flags=111300, id=10589974): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+15/07/2022 09:38:31 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/index.lock", inode=8672658203, flags=11900, id=10589980): is_coalesced, is_created, is_file, is_modified, is_renamed
+15/07/2022 09:38:31 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/index", inode=8672658036, flags=10800, id=10589982): is_file, is_renamed
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <FileCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/12/4fdae867e089b08274ff359f1a36f76cabeed8', is_directory=False>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/12', is_directory=True>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <DirCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/12', is_directory=True>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects', is_directory=True>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/12', is_directory=True>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/12/tmp_obj_MF16qZ', is_directory=False>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/12/tmp_obj_MF16qZ', is_directory=False>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/12', is_directory=True>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <FileCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index', is_directory=False>
+15/07/2022 09:38:31 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>
+15/07/2022 09:39:11 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/7a/264f58c238fca262b7297095ef803d50ed42f0", inode=8672658244, flags=110100, id=10591027): is_created, is_file, is_hardlink
+15/07/2022 09:39:11 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/7a", inode=8672658243, flags=20500, id=10591030): is_created, is_directory, is_inode_meta_mod
+15/07/2022 09:39:11 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/7a/tmp_obj_JPpCCV", inode=8672658244, flags=111300, id=10591033): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+15/07/2022 09:39:11 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/index.lock", inode=8672658242, flags=11900, id=10591039): is_coalesced, is_created, is_file, is_modified, is_renamed
+15/07/2022 09:39:11 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/index", inode=8672658203, flags=10800, id=10591041): is_file, is_renamed
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <FileCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/7a/264f58c238fca262b7297095ef803d50ed42f0', is_directory=False>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/7a', is_directory=True>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <DirCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/7a', is_directory=True>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects', is_directory=True>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/7a', is_directory=True>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/7a/tmp_obj_JPpCCV', is_directory=False>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/7a/tmp_obj_JPpCCV', is_directory=False>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/7a', is_directory=True>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <FileCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index', is_directory=False>
+15/07/2022 09:39:11 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>
+15/07/2022 09:39:19 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/index.lock", inode=8672658248, flags=11900, id=10591647): is_coalesced, is_created, is_file, is_modified, is_renamed
+15/07/2022 09:39:19 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/4f", inode=8672658249, flags=20100, id=10591650): is_created, is_directory
+15/07/2022 09:39:19 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/4f/tmp_obj_xApIm4", inode=8672658250, flags=10100, id=10591653): is_created, is_file
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <FileCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <DirCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/4f', is_directory=True>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects', is_directory=True>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <FileCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/4f/tmp_obj_xApIm4', is_directory=False>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/4f', is_directory=True>
+15/07/2022 09:39:19 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/4f/7f04182c8d4e39f43e9a913e4c58b84d7ae7a1", inode=8672658250, flags=110100, id=10591659): is_created, is_file, is_hardlink
+15/07/2022 09:39:19 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/4f", inode=8672658249, flags=20500, id=10591662): is_created, is_directory, is_inode_meta_mod
+15/07/2022 09:39:19 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/objects/4f/tmp_obj_xApIm4", inode=8672658250, flags=111300, id=10591665): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+15/07/2022 09:39:19 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/index.lock", inode=8672658248, flags=11900, id=10591671): is_coalesced, is_created, is_file, is_modified, is_renamed
+15/07/2022 09:39:19 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/.git/index", inode=8672658242, flags=10800, id=10591673): is_file, is_renamed
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/4f', is_directory=True>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/4f/tmp_obj_xApIm4', is_directory=False>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/4f/tmp_obj_xApIm4', is_directory=False>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/objects/4f', is_directory=True>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <FileCreatedEvent: event_type=created, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index.lock', is_directory=False>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <FileDeletedEvent: event_type=deleted, src_path='/Users/armandosoaressousa/git/mytemplate/.git/index', is_directory=False>
+15/07/2022 09:39:19 - fsevents - DEBUG - queue_event <DirModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/.git', is_directory=True>

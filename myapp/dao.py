@@ -161,7 +161,23 @@ class Motoristas:
             db.session.commit()
         except Exception as e:
             print(f'Error during insert motorista - {e}')
-    
+
+    # atualiza dados do motorista
+    def update_motorista(self, id, novos_dados_motorista):
+        try:
+            motorista_to_update = self.query_motorista_by_id(id)
+            print(f'Dados originais: {motorista_to_update.id, motorista_to_update.cpf, motorista_to_update.nome, motorista_to_update.data_nascimento, motorista_to_update.telefone, motorista_to_update.categoria}')
+            motorista_to_update.cpf = novos_dados_motorista.cpf
+            motorista_to_update.nome = novos_dados_motorista.nome
+            motorista_to_update.data_nascimento = novos_dados_motorista.data_nascimento
+            motorista_to_update.telefone = novos_dados_motorista.telefone
+            motorista_to_update.categoria = novos_dados_motorista.categoria
+            print(f'Novos dados: {motorista_to_update.id, motorista_to_update.cpf, motorista_to_update.nome, motorista_to_update.data_nascimento, motorista_to_update.telefone, motorista_to_update.categoria}')
+            db.session.commit()
+            print(f'Foi feito o commit!')
+        except Exception as e:
+            raise Exception(f'Error during update motorista - {e}')
+
     # procura motorista por cpf
     def query_motorista_by_cpf(self, p_cpf):
         motorista = Motorista.query.filter_by(cpf=p_cpf).first()

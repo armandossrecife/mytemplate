@@ -27,8 +27,8 @@
             {% for alocado in veiculos %}
             <tr>
               <td>{{ loop.index + (page - 1) * per_page }}</td>
-              <td>{{ alocado.owner_veiculo }}</td>
-              <td>{{ alocado.owner_motorista }}</td>
+              <td>{{ get_placa_veiculo(alocado.owner_veiculo) }}</td>
+              <td>{{ get_nome_motorista(alocado.owner_motorista) }}</td>
               <td>{{ alocado.origem }}</td>              
               <td>{{ alocado.latitude_origem }}</td>
               <td>{{ alocado.longitude_origem }}</td>

@@ -1,0 +1,2 @@
+15/07/2022 09:09:52 - fsevents - DEBUG - NativeEvent(path="/Users/armandosoaressousa/git/mytemplate/logs/my_app_authentication.log", inode=8672518645, flags=11400, id=10569604): is_file, is_inode_meta_mod, is_modified
+15/07/2022 09:09:52 - fsevents - DEBUG - queue_event <FileModifiedEvent: event_type=modified, src_path='/Users/armandosoaressousa/git/mytemplate/logs/my_app_authentication.log', is_directory=False>

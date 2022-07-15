@@ -1,7 +1,8 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, IntegerField, PasswordField, SubmitField
+from wtforms import StringField, IntegerField, PasswordField, SubmitField, SelectField
 from wtforms.validators import NumberRange, Length, EqualTo, Email, DataRequired, ValidationError
 from myapp.dao import User
+from wtforms.fields.html5 import DateField, TimeField
 
 class RegisterForm(FlaskForm):
     def validate_username(self, username_to_check):
@@ -42,14 +43,20 @@ class VeiculoForm(FlaskForm):
 class MotoristaForm(FlaskForm):
     cpf = StringField(label='CPF do Motorista:', validators=[Length(min=2, max=20), DataRequired()])
     nome = StringField(label='Nome do Motorista:', validators=[Length(min=2, max=100), DataRequired()])
-    data_nascimento = StringField(label='Data de Nascimento:', validators=[Length(min=6, max=100), DataRequired()])
+    data_nascimento = StringField(label='Data de Nascimento:')
     telefone = StringField(label='Telefone do Motorista:', validators=[Length(min=8, max=20), DataRequired()])
     categoria = IntegerField(label='Categoria do Motorista:', validators=[NumberRange(min=1, max=100), DataRequired()])
     submit = SubmitField(label='New')
+    def load_content(self, cpf, nome, data_nascimento, telefone, categoria):
+        self.cpf.data = cpf
+        self.nome.data = nome
+        self.data_nascimento.data = data_nascimento
+        self.telefone.data = telefone
+        self.categoria.data = categoria
 
 class AlocarVeiculoForm(FlaskForm):
-    owner_veiculo = IntegerField(label='Id do Veiculo:', validators=[NumberRange(min=1, max=10000), DataRequired()])
-    owner_motorista = IntegerField(label='Id do Motorista', validators=[NumberRange(min=1, max=10000), DataRequired()])
+    owner_veiculo = SelectField(u'Veiculo:')
+    owner_motorista = SelectField(u'Motorista:')
     origem = StringField(label='Origem', validators=[Length(min=2, max=1000), DataRequired()])
     latitude_origem = StringField(label='Latitude da Origem', validators=[Length(min=1, max=100), DataRequired()])
     longitude_origem = StringField(label='Longitude da Origem', validators=[Length(min=1, max=100), DataRequired()])
@@ -58,4 +65,9 @@ class AlocarVeiculoForm(FlaskForm):
     longitude_destino = StringField(label='Longitude do Destino', validators=[Length(min=1, max=100), DataRequired()])
     carga = StringField(label='Peso da carga', validators=[Length(min=1, max=100), DataRequired()])
     data_entrega = StringField(label='Data da entrega', validators=[Length(min=2, max=50), DataRequired()])
+    data_entrega2 = DateField('Data', format='%d-%m-%Y')
+    hora_entrega2  = TimeField('Time', format='%H:%M')
     submit = SubmitField(label='New')
+    def load_content(self, veiculos, motoristas):
+        self.owner_veiculo.choices = veiculos
+        self.owner_motorista.choices = motoristas

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+  Motorista Page
+{% endblock %}
+
+{% block content %}
+
+<form method="POST" class="form-veiculo" >
+    {{ form.hidden_tag() }}
+    <h1 class="h3 mb-3 font-weight-normal">
+        Edita Motorista {{ motorista.nome }}
+    </h1>
+    <br>
+    <!-- CPF do motorista -->
+    {{ form.cpf.label() }}
+    {{ form.cpf(class="form-control") }}
+
+    <!-- Nome do motorista -->
+    {{ form.nome.label() }}
+    {{ form.nome(class="form-control") }}
+
+    <!-- telefone do motorista -->
+    {{ form.telefone.label() }}
+    {{ form.telefone(class="form-control") }}
+    
+    <!-- Data de Nascimento do motorista -->
+    {{ form.data_nascimento.label() }}
+    {{ form.data_nascimento(class="form-control") }}
+
+    <!-- Categoria do motorista -->
+    {{ form.categoria.label() }}
+    {{ form.categoria(class="form-control") }}
+
+    <br>
+    {{ form.submit(class="btn btn-lg btn-block btn-primary", value="Update") }}
+    <br>
+</form>
+
+{% endblock %}

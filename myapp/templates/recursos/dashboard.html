@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}
+  Veiculos Alocados
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Alocações</h5>
+      <p class="card-text">{{ qtd_alocacoes }}</p>
+      <a href="{{ url_for('veiculos_alocados_page') }}" class="card-link">Lista todas</a>
+      <a href="{{ url_for('alocar_veiculo_page') }}" class="card-link">Insere Nova</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Veículos</h5>
+      <p class="card-text">{{ qtd_veiculos }}</p>
+      <a href="{{ url_for('veiculos_page') }}" class="card-link">Lista todos</a>
+      <a href="{{ url_for('insere_veiculo') }}" class="card-link">Insere Novo</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Motoristas</h5>
+      <p class="card-text">{{ qtd_motoristas }}</p>
+      <a href="{{ url_for('motoristas_page') }}" class="card-link">Lista todos</a>
+      <a href="{{ url_for('insere_motorista') }}"  class="card-link">Insere Novo</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Manutenções</h5>
+      <p class="card-text">3</p>
+      <a href="#" class="card-link">Lista todas</a>
+      <a href="#" class="card-link">Insere Nova</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Alertas</h5>
+      <p class="card-text">25</p>
+      <a href="#" class="card-link">Lista todos</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Abastecimentos</h5>
+      <p class="card-text">1</p>
+      <a href="#" class="card-link">Lista todos</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Multas</h5>
+      <p class="card-text">2</p>
+      <a href="#" class="card-link">Lista todas</a>
+      <a href="#" class="card-link">Insere Nova</a>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

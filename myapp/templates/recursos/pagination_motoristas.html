@@ -29,7 +29,7 @@
               <td>{{ motorista.data_nascimento}}</td>
               <td>{{ motorista.categoria}}</td>
               <td>
-                <a href="#">Editar</a> | <a href="#">Deletar</a>
+                <a href="{{ url_for('edita_motorista', id=motorista.id) }}">Editar</a> | <a href="#">Deletar</a>
               </td>
             </tr>
             {% endfor %}
